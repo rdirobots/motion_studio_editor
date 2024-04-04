@@ -66,7 +66,7 @@ foreach(COMPONENT ${_osl_FIND_COMPONENTS})
 endforeach()
 
 # Note linking order matters, and oslnoise existence depends on version.
-set(_osl_LIBRARIES ${OSL_OSLCOMP_LIBRARY})
+set(_osl_LIBRARIES "/home/philip/rdi_motion_studio/OpenShadingLanguage/build/lib") #${OSL_OSLCOMP_LIBRARY})
 if(APPLE)
   list(APPEND _osl_LIBRARIES -force_load ${OSL_OSLEXEC_LIBRARY})
 else()
