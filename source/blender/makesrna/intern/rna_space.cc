@@ -284,10 +284,10 @@ const EnumPropertyItem rna_enum_space_action_mode_items[] = {
 #undef SACT_ITEM_MASK
 #undef SACT_ITEM_CACHEFILE
 
-#define SI_ITEM_VIEW(identifier, name, icon) \
-  { \
-    SI_MODE_VIEW, identifier, icon, name, "View the image" \
-  }
+// #define SI_ITEM_VIEW(identifier, name, icon) \
+//   { \
+//     SI_MODE_VIEW, identifier, icon, name, "View the image" \
+//   }
 //#define SI_ITEM_UV \
 //  { \
 //    SI_MODE_UV, "UV", ICON_UV, "UV Editor", "UV edit in mesh editmode" \
@@ -302,7 +302,7 @@ const EnumPropertyItem rna_enum_space_action_mode_items[] = {
   }
 
 const EnumPropertyItem rna_enum_space_image_mode_all_items[] = {
-    SI_ITEM_VIEW("VIEW", "View", ICON_FILE_IMAGE),
+    // SI_ITEM_VIEW("VIEW", "View", ICON_FILE_IMAGE),
     //SI_ITEM_UV,
     SI_ITEM_PAINT,
     SI_ITEM_MASK,
@@ -310,19 +310,19 @@ const EnumPropertyItem rna_enum_space_image_mode_all_items[] = {
 };
 
 static const EnumPropertyItem rna_enum_space_image_mode_ui_items[] = {
-    SI_ITEM_VIEW("VIEW", "View", ICON_FILE_IMAGE),
+    // SI_ITEM_VIEW("VIEW", "View", ICON_FILE_IMAGE),
     SI_ITEM_PAINT,
     SI_ITEM_MASK,
     {0, nullptr, 0, nullptr, nullptr},
 };
 
 const EnumPropertyItem rna_enum_space_image_mode_items[] = {
-    SI_ITEM_VIEW("IMAGE_EDITOR", "Image Editor", ICON_IMAGE),
+    //SI_ITEM_VIEW("IMAGE_EDITOR", "Image Editor", ICON_IMAGE),
     //SI_ITEM_UV,
     {0, nullptr, 0, nullptr, nullptr},
 };
 
-#undef SI_ITEM_VIEW
+//#undef SI_ITEM_VIEW
 //#undef SI_ITEM_UV
 #undef SI_ITEM_PAINT
 #undef SI_ITEM_MASK
