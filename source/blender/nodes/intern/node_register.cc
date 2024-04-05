@@ -111,7 +111,7 @@ void register_nodes()
   register_node_type_group_input();
   register_node_type_group_output();
 
-  register_composite_nodes();
+  //register_composite_nodes();
   register_shader_nodes();
   register_texture_nodes();
   register_geometry_nodes();
