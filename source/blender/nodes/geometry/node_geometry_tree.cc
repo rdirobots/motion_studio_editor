@@ -132,5 +132,5 @@ void register_node_tree_type_geo()
   tt->valid_socket_type = geometry_node_tree_socket_type_valid;
   tt->validate_link = geometry_node_tree_validate_link;
 
-  ntreeTypeAdd(tt);
+  //ntreeTypeAdd(tt);
 }
