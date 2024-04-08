@@ -185,7 +185,7 @@ void register_node_tree_type_sh()
 
   tt->rna_ext.srna = &RNA_ShaderNodeTree;
 
-  ntreeTypeAdd(tt);
+  //ntreeTypeAdd(tt);
 }
 
 /* GPU material from shader nodes */
