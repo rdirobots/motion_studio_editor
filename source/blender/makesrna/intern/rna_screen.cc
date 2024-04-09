@@ -193,7 +193,8 @@ static const EnumPropertyItem *rna_Area_ui_type_itemf(bContext *C,
              SPACE_TEXT,
              SPACE_CONSOLE,
              SPACE_OUTLINER,
-             SPACE_PROPERTIES)) {
+             SPACE_PROPERTIES,
+             SPACE_FILE)) {
       continue;
     }
 
