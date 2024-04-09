@@ -189,7 +189,7 @@ const EnumPropertyItem rna_enum_space_graph_mode_items[] = {
      ICON_GRAPH,
      "Graph Editor",
      "Edit animation/keyframes displayed as 2D curves"},
-    {SIPO_MODE_DRIVERS, "DRIVERS", ICON_DRIVER, "Drivers", "Edit drivers"},
+    //{SIPO_MODE_DRIVERS, "DRIVERS", ICON_DRIVER, "Drivers", "Edit drivers"},
     {0, nullptr, 0, nullptr, nullptr},
 };
 
