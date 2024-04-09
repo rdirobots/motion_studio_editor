@@ -158,7 +158,7 @@ const EnumPropertyItem rna_enum_space_type_items[] = {
      "screen for general status information"},
 
     /* Data. */
-    RNA_ENUM_ITEM_HEADING(N_("Data"), nullptr),
+    //RNA_ENUM_ITEM_HEADING(N_("Data"), nullptr),
     {SPACE_OUTLINER,
      "OUTLINER",
      ICON_OUTLINER,
