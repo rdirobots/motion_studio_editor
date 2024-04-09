@@ -210,10 +210,10 @@ const EnumPropertyItem rna_enum_space_file_browse_mode_items[] = {
     {0, nullptr, 0, nullptr, nullptr},
 };
 
-#define SACT_ITEM_DOPESHEET \
-  { \
-    SACTCONT_DOPESHEET, "DOPESHEET", ICON_ACTION, "Dope Sheet", "Edit all keyframes in scene" \
-  }
+// #define SACT_ITEM_DOPESHEET \
+//   { \
+//     SACTCONT_DOPESHEET, "DOPESHEET", ICON_ACTION, "Dope Sheet", "Edit all keyframes in scene" \
+//   }
 #define SACT_ITEM_TIMELINE \
   { \
     SACTCONT_TIMELINE, "TIMELINE", ICON_TIME, "Timeline", "Timeline and playback controls" \
@@ -247,7 +247,7 @@ const EnumPropertyItem rna_enum_space_file_browse_mode_items[] = {
 /* XXX: action-editor is currently for object-level only actions,
  * so show that using object-icon hint */
 static EnumPropertyItem rna_enum_space_action_mode_all_items[] = {
-    SACT_ITEM_DOPESHEET,
+    //SACT_ITEM_DOPESHEET,
     SACT_ITEM_TIMELINE,
     SACT_ITEM_ACTION,
     SACT_ITEM_SHAPEKEY,
@@ -257,7 +257,7 @@ static EnumPropertyItem rna_enum_space_action_mode_all_items[] = {
     {0, nullptr, 0, nullptr, nullptr},
 };
 static EnumPropertyItem rna_enum_space_action_ui_mode_items[] = {
-    SACT_ITEM_DOPESHEET,
+    //SACT_ITEM_DOPESHEET,
     /* SACT_ITEM_TIMELINE, */
     SACT_ITEM_ACTION,
     SACT_ITEM_SHAPEKEY,
@@ -271,12 +271,12 @@ static EnumPropertyItem rna_enum_space_action_ui_mode_items[] = {
 /* Expose as `ui_mode`. */
 
 const EnumPropertyItem rna_enum_space_action_mode_items[] = {
-    SACT_ITEM_DOPESHEET,
+    //SACT_ITEM_DOPESHEET,
     SACT_ITEM_TIMELINE,
     {0, nullptr, 0, nullptr, nullptr},
 };
 
-#undef SACT_ITEM_DOPESHEET
+//#undef SACT_ITEM_DOPESHEET
 #undef SACT_ITEM_TIMELINE
 #undef SACT_ITEM_ACTION
 #undef SACT_ITEM_SHAPEKEY
