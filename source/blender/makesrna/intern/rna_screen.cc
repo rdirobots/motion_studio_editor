@@ -186,7 +186,7 @@ static const EnumPropertyItem *rna_Area_ui_type_itemf(bContext *C,
   }
 
   for (; item_from->identifier; item_from++) {
-    if (ELEM(item_from->value, SPACE_TOPBAR, SPACE_STATUSBAR, SPACE_CLIP)) {
+    if (ELEM(item_from->value, SPACE_TOPBAR, SPACE_STATUSBAR, SPACE_CLIP, SPACE_TEXT)) {
       continue;
     }
 
