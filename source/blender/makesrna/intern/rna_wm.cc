@@ -2402,14 +2402,14 @@ static void rna_def_window(BlenderRNA *brna)
   RNA_def_property_flag(prop, PROP_CONTEXT_UPDATE);
   RNA_def_property_update(prop, 0, "rna_Window_scene_update");
 
-  prop = RNA_def_property(srna, "workspace", PROP_POINTER, PROP_NONE);
-  RNA_def_property_flag(prop, PROP_NEVER_NULL);
-  RNA_def_property_struct_type(prop, "WorkSpace");
-  RNA_def_property_ui_text(prop, "Workspace", "Active workspace showing in the window");
-  RNA_def_property_pointer_funcs(
-      prop, "rna_Window_workspace_get", "rna_Window_workspace_set", nullptr, nullptr);
-  RNA_def_property_flag(prop, PROP_EDITABLE | PROP_CONTEXT_UPDATE);
-  RNA_def_property_update(prop, 0, "rna_Window_workspace_update");
+  // prop = RNA_def_property(srna, "workspace", PROP_POINTER, PROP_NONE);
+  // RNA_def_property_flag(prop, PROP_NEVER_NULL);
+  // RNA_def_property_struct_type(prop, "WorkSpace");
+  // RNA_def_property_ui_text(prop, "Workspace", "Active workspace showing in the window");
+  // RNA_def_property_pointer_funcs(
+  //     prop, "rna_Window_workspace_get", "rna_Window_workspace_set", nullptr, nullptr);
+  // RNA_def_property_flag(prop, PROP_EDITABLE | PROP_CONTEXT_UPDATE);
+  // RNA_def_property_update(prop, 0, "rna_Window_workspace_update");
 
   prop = RNA_def_property(srna, "screen", PROP_POINTER, PROP_NONE);
   RNA_def_property_struct_type(prop, "Screen");
