@@ -63,7 +63,7 @@ if "%SVN_FIX%" == "1" (
 
 if "%BUILD_UPDATE%" == "1" (
 	REM First see if the SVN libs are there and check them out if they are not.
-	call "%BLENDER_DIR%\build_files\windows\check_libraries.cmd"
+	REM call "%BLENDER_DIR%\build_files\windows\check_libraries.cmd"
 	if errorlevel 1 goto EOF
 	if "%BUILD_UPDATE_SVN%" == "1" (
 		REM Then update SVN platform libraries, since updating python while python is
@@ -105,7 +105,7 @@ if "%CMAKE%" == "" (
 
 echo Building blender with VS%BUILD_VS_YEAR% for %BUILD_ARCH% in %BUILD_DIR%
 
-call "%BLENDER_DIR%\build_files\windows\check_libraries.cmd"
+REM call "%BLENDER_DIR%\build_files\windows\check_libraries.cmd"
 if errorlevel 1 goto EOF
 
 if "%TEST%" == "1" (
