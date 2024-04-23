@@ -9,6 +9,10 @@ set(PROJECT_COPYRIGHT    "Copyright (C) 2001-${CURRENT_YEAR} Blender Authors")
 set(PROJECT_CONTACT      "foundation@blender.org")
 set(PROJECT_VENDOR       "Blender Foundation")
 
+set(BLENDER_VERSION_MAJOR 1)
+set(BLENDER_VERSION_MINOR 0)
+set(BLENDER_VERSION_PATCH 0)
+
 set(MAJOR_VERSION ${BLENDER_VERSION_MAJOR})
 set(MINOR_VERSION ${BLENDER_VERSION_MINOR})
 set(PATCH_VERSION ${BLENDER_VERSION_PATCH})
@@ -40,6 +44,7 @@ endif()
 set(BUILD_REV ${MY_WC_HASH})
 unset(MY_WC_HASH)
 
+set(PROJECT_NAME "RDI Motion Studio")
 
 # Force Package Name
 execute_process(COMMAND date "+%Y%m%d" OUTPUT_VARIABLE CPACK_DATE OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -53,6 +58,8 @@ if(MSVC)
 else()
   set(PACKAGE_ARCH ${CMAKE_SYSTEM_PROCESSOR})
 endif()
+
+set(CPACK_OVERRIDE_PACKAGENAME "rdi_ms_installer")
 
 if(CPACK_OVERRIDE_PACKAGENAME)
   set(CPACK_PACKAGE_FILE_NAME ${CPACK_OVERRIDE_PACKAGENAME}-${PACKAGE_ARCH})
@@ -84,8 +91,8 @@ if(APPLE)
 endif()
 
 if(WIN32)
-  set(CPACK_PACKAGE_INSTALL_DIRECTORY "Blender Foundation/Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
-  set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "Blender Foundation/Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
+  set(CPACK_PACKAGE_INSTALL_DIRECTORY "RDI Motion Studio")
+  set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "RDI Motion Studio")
 
   set(CPACK_NSIS_MUI_ICON ${CMAKE_SOURCE_DIR}/release/windows/icons/winblender.ico)
   set(CPACK_NSIS_COMPRESSOR "/SOLID lzma")
@@ -108,8 +115,15 @@ if(WIN32)
   set(CPACK_WIX_LIGHT_EXTRA_FLAGS -dcl:medium)
 endif()
 
-set(CPACK_PACKAGE_EXECUTABLES "blender-launcher" "Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
-set(CPACK_CREATE_DESKTOP_LINKS "blender-launcher" "Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
+set(CPACK_NSIS_MODIFY_PATH "ON")
+
+if(WIN32)
+  set(CPACK_PACKAGE_EXECUTABLES "..\\blender-launcher" "RDI Motion Studio")
+  set(CPACK_CREATE_DESKTOP_LINKS "..\\blender-launcher" "RDI Motion Studio")
+else
+  set(CPACK_PACKAGE_EXECUTABLES "blender-launcher" "RDI Motion Studio")
+  set(CPACK_CREATE_DESKTOP_LINKS "blender-launcher" "RDI Motion Studio")
+endif()
 
 include(CPack)
 
