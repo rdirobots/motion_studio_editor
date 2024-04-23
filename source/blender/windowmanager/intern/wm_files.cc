@@ -3764,7 +3764,6 @@ void wm_test_autorun_warning(bContext *C)
   if (win) {
     wmWindow *prevwin = CTX_wm_window(C);
     CTX_wm_window_set(C, win);
-    UI_popup_block_invoke(C, block_create_autorun_warning, nullptr, nullptr);
     CTX_wm_window_set(C, prevwin);
   }
 }
