@@ -421,11 +421,19 @@ endif()
 # -----------------------------------------------------------------------------
 # Install Targets (Generic, All Platforms)
 
-install(
-  FILES
-    ${CMAKE_SOURCE_DIR}/release/datafiles/MS_template.blend
-  DESTINATION ${TARGETDIR_EXE}
-)
+if(APPLE)
+  install(
+    FILES
+      ${CMAKE_SOURCE_DIR}/release/datafiles/MS_template.blend
+    DESTINATION "./Blender.app/Contents/Resources"
+  )
+else()
+  install(
+    FILES
+      ${CMAKE_SOURCE_DIR}/release/datafiles/MS_template.blend
+    DESTINATION ${TARGETDIR_EXE}
+  )
+endif()
 
 if(WITH_PYTHON)
   # install(CODE "message(\"copying blender scripts...\")")
