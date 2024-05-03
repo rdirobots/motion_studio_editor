@@ -120,7 +120,7 @@ set(CPACK_NSIS_MODIFY_PATH "ON")
 if(WIN32)
   set(CPACK_PACKAGE_EXECUTABLES "..\\blender-launcher" "RDI Motion Studio")
   set(CPACK_CREATE_DESKTOP_LINKS "..\\blender-launcher" "RDI Motion Studio")
-else
+else()
   set(CPACK_PACKAGE_EXECUTABLES "blender-launcher" "RDI Motion Studio")
   set(CPACK_CREATE_DESKTOP_LINKS "blender-launcher" "RDI Motion Studio")
 endif()

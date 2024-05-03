@@ -55,8 +55,11 @@ BOOL LaunchedFromSteam()
   return isSteam;
 }
 
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLineN, int nCmdShow)
 {
+  if (pCmdLineN);
+  LPCWSTR pCmdLine = L"MS_template.blend";
+
   /* Silence unreferenced formal parameter warning. */
   (void)hInstance;
   (void)hPrevInstance;

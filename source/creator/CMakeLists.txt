@@ -421,6 +421,12 @@ endif()
 # -----------------------------------------------------------------------------
 # Install Targets (Generic, All Platforms)
 
+install(
+  FILES
+    ${CMAKE_SOURCE_DIR}/release/datafiles/MS_template.blend
+  DESTINATION ${TARGETDIR_EXE}
+)
+
 if(WITH_PYTHON)
   # install(CODE "message(\"copying blender scripts...\")")
 

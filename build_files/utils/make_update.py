@@ -80,8 +80,10 @@ def get_effective_architecture(args: argparse.Namespace) -> str:
 
     return platform.machine().lower()
 
+def svn_update():
+    return []
 
-def svn_update(args: argparse.Namespace, release_version: Optional[str]) -> None:
+def svn_update_stop(args: argparse.Namespace, release_version: Optional[str]) -> None:
     svn_non_interactive = [args.svn_command, '--non-interactive']
 
     lib_dirpath = os.path.join(get_blender_git_root(), '..', 'lib')
